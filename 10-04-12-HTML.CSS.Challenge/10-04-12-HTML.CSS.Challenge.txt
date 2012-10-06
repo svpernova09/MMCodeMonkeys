@@ -1,0 +1,30 @@
+=== Topic ===
+HTML/CSS Challenge + Special surprise challenge
+
+=== Links ===
+* Tutorials
+** Web Fundamentals: http://www.codecademy.com/tracks/web
+** JavaScript Fundamentals: http://www.codecademy.com/tracks/javascript
+* Sample Code
+** Assignment Example & Assignment Challenge
+*** http://wiki.midsouthmakers.org/a/CodeMonkeys_Meeting_notes_2012-09-20
+
+=== Basic Assignment===
+* Start with the Assignment Challenge code
+* Create a form in the "Form" div that takes a visitors name as input and greets them when they reload the page.
+* The form to enter a name should only show if the user has NOT previously entered a name.
+* Add the current time to the footer of the page
+* Edit the user greeting by name to adjust for Morning / Evening ("Good Morning" or "Good Evening")
+
+==Advanced Assignment==
+* Complete the Basic Assignment
+* Create another DIV section and show the user as much information about the user as you can
+* Create another DIV section and show the user as much information about the SERVER as you can
+* Add a file upload upload to allow the user to add an image to the site. Display the image if there is one.
+
+==Special Challenge Assignment==
+* Complete the Advanced Assignment
+* Create thumbnails of every image on the page dynamically
+* Create a photo gallery and allow users to upload pictures and add tags to them.
+* Sort by tags, uploaded date/time
+* Ensure all photos get thumbnails created and thumbnails are displayed in gallery

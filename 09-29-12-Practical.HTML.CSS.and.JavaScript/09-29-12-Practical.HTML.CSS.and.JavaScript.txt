@@ -1,0 +1,364 @@
+=== Topic ===
+
+Practical HTML, CSS, and JavaScript
+
+=== Links ===
+* Tutorials
+** Web Fundamentals: http://www.codecademy.com/tracks/web
+** JavaScript Fundamentals: http://www.codecademy.com/tracks/javascript
+
+===Assignment===
+Create a single web page that contains 4 sections using HTML and CSS
+* Sections should be Header, Navigation, Content, Footer
+* Navigation should contain links to 5 different websites.
+* Header should contain the name of your website
+* Content should contain:
+** a paragraph about your website. (Or Ipsum)
+** at least 2 images with alternate locations (left, right, or center)
+* Footer should contain copyright information & website name.
+
+
+==Assignment Challenges==
+* Add a JavaScript based web hit counter to track how many times a visitor has view the page.
+* Using Navigation links, change what appears in Content section
+** MUST be done on 1 page (1 url)
+** NO language outside of HTML/Javascript/Jquery/AJAX
+** Must be able to return to default content view
+** example: Content 1, Content 2, Content 3 sections, clicking respective links in navigation pane displays the content in the content section.
+
+===Code Examples===
+
+* Assignment Example:
+ <nowiki>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CodeMonkeys Demo</title>
+<style type="text/css">
+p{ line-height: 1em; }
+h1, h2, h3, h4{
+    color: orange;
+    font-weight: normal;
+    line-height: 1.1em;
+	margin: 0 0 .5em 0;
+}
+h1{ font-size: 1.7em; }
+h2{ font-size: 1.5em; }
+a{
+	text-decoration: none;
+}
+
+body{
+    font-family: arial; 
+    font-size: 80%;
+    font-weight: normal;
+    line-height: 1.2em; 
+    width: 100%; 
+    margin: 0; 
+    background: #eee;
+}
+
+#page{ margin: 20px; }
+
+#logo{
+	width: 35%;
+	margin-top: 5px;
+    display: inline-block
+}
+
+
+#nav{
+    width: 60%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+	#nav ul{}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+		}
+			#nav ul li a{
+				padding: 20px;
+				background: orange;
+				color: white;
+			}
+			#nav ul li a:hover{
+				background-color: #ffb424;
+				box-shadow: 0px 1px 1px #666;
+			}
+			#nav ul li a:active{ background-color: #ff8f00; }
+#content{
+	margin: 30px 0;
+	background: white;
+	padding: 20px;
+	clear: both;
+}
+#footer{
+	border-bottom: 1px #ccc solid;
+	margin-bottom: 10px;
+}
+	#footer p{
+	
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 80%;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="page">
+    <div id="logo">
+        <h1><a href="#">My First Website</a></h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li class="red"><a href="#">Home</a></li>
+            <li class="orange"><a href="#">About</a></li>
+            <li class="yellow"><a href="#">Contact</a></li>
+        </ul>	
+    </div>
+    <div id="content">
+        <h2>Home</h2>
+        <p>Bacon ipsum dolor sit amet non pork chop officia eiusmod beef ribs laboris. Tongue capicola pariatur drumstick turkey rump aliquip duis veniam. Drumstick velit in et prosciutto laboris labore pariatur tongue meatloaf nisi beef elit. In kielbasa elit meatloaf, velit fatback aliquip nostrud pork ham hock sausage laborum jerky. Ham culpa nostrud exercitation veniam dolore short ribs spare ribs chuck.</p>
+        <img src="bacon.png" width="200px" />
+        <p>Pork meatball drumstick ut tail. Voluptate tongue pork belly minim flank. Do commodo ham ut spare ribs minim salami boudin reprehenderit andouille. Spare ribs ea filet mignon enim adipisicing sausage in ball tip cillum corned beef turducken. Nulla biltong ham, culpa shankle elit rump frankfurter. Ham eu fatback, deserunt turkey pancetta fugiat pork belly. Short ribs labore est hamburger proident ham hock biltong shank officia tenderloin laboris.</p>
+        <img src="Cooked_Bacon.jpg" width="200px" />
+    </div>
+    <div id="footer">
+        <p>
+            Copyright 2012 - My First Website
+        </p>
+    </div>
+</div>
+</body>
+</html>
+
+
+</nowiki>
+
+* Assignment Challenge
+ <nowiki>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CodeMonkeys Demo</title>
+<style type="text/css">
+p{ line-height: 1em; }
+h1, h2, h3, h4{
+    color: orange;
+    font-weight: normal;
+    line-height: 1.1em;
+	margin: 0 0 .5em 0;
+}
+h1{ font-size: 1.7em; }
+h2{ font-size: 1.5em; }
+a{
+	text-decoration: none;
+}
+
+body{
+    font-family: arial; 
+    font-size: 80%;
+    font-weight: normal;
+    line-height: 1.2em; 
+    width: 100%; 
+    margin: 0; 
+    background: #eee;
+}
+
+#page{ margin: 20px; }
+
+#logo{
+	width: 35%;
+	margin-top: 5px;
+    display: inline-block
+}
+
+
+#nav{
+    width: 60%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+	#nav ul{}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+		}
+			#nav ul li a{
+				padding: 20px;
+				background: orange;
+				color: white;
+			}
+			#nav ul li a:hover{
+				background-color: #ffb424;
+				box-shadow: 0px 1px 1px #666;
+			}
+			#nav ul li a:active{ background-color: #ff8f00; }
+#content{
+	margin: 30px 0;
+	background: white;
+	padding: 20px;
+	clear: both;
+}
+#footer{
+	border-bottom: 1px #ccc solid;
+	margin-bottom: 10px;
+}
+	#footer p{
+	
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 80%;
+	}
+
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+ 
+	//Default Action
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+	
+	//On Click Event
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+		var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active content
+		return false;
+	});
+ 
+});
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+ function nameDefined(ckie,nme)
+{
+   var splitValues
+   var i
+   for (i=0;i<ckie.length;++i)
+   {
+      splitValues=ckie[i].split("=")
+      if (splitValues[0]==nme) return true
+   }
+   return false
+}
+
+function delBlanks(strng)
+{
+   var result=""
+   var i
+   var chrn
+   for (i=0;i<strng.length;++i) {
+      chrn=strng.charAt(i)
+      if (chrn!=" ") result += chrn
+   }
+   return result
+}
+function getCookieValue(ckie,nme)
+{
+   var splitValues
+   var i
+   for(i=0;i<ckie.length;++i) {
+      splitValues=ckie[i].split("=")
+      if(splitValues[0]==nme) return splitValues[1]
+   }
+   return ""
+}
+function insertCounter() {
+ readCookie()
+ displayCounter()
+}
+ function displayCounter() {
+ document.write('<H3 ALIGN="CENTER">')
+ document.write("You've visited this page ")
+ if(counter==1) document.write("the first time.")
+ else document.write(counter+" times.")
+ document.writeln('</H3>')
+ }
+function readCookie() {
+ var cookie=document.cookie
+ counter=0
+ var chkdCookie=delBlanks(cookie)  //are on the client computer
+ var nvpair=chkdCookie.split(";")
+ if(nameDefined(nvpair,"pageCount"))
+ counter=parseInt(getCookieValue(nvpair,"pageCount"))
+ ++counter
+ var futdate = new Date()
+ var expdate = futdate.getTime()
+ expdate += 3600000 * 24 *30  //expires in 1 hour
+ futdate.setTime(expdate)
+
+ var newCookie="pageCount="+counter
+ newCookie += "; expires=" + futdate.toGMTString()
+ window.document.cookie=newCookie
+}
+// -->
+</SCRIPT>
+</head>
+
+<body>
+
+<div id="page">
+    <div id="logo">
+        <h1><a href="#">My First Website</a></h1>
+    </div>
+    <div id="nav">
+        <ul class="tabs">
+            <li class="orange"><a href="#Home">Home</a></li>
+            <li class="orange"><a href="#Counter">Counter</a></li>
+            <li class="orange"><a href="#MoreBacon">More Bacon</a></li>
+            <li class="orange"><a href="#EvenMoreBacon">Even More Bacon</a></li>
+        </ul>	
+    </div>
+    <div id="content">
+    <div class="tab_container"> 
+        <div id="Home" class="tab_content"> 
+        	<h2>Home</h2>
+        <p>Bacon ipsum dolor sit amet non pork chop officia eiusmod beef ribs laboris. Tongue capicola pariatur drumstick turkey rump aliquip duis veniam. Drumstick velit in et prosciutto laboris labore pariatur tongue meatloaf nisi beef elit. In kielbasa elit meatloaf, velit fatback aliquip nostrud pork ham hock sausage laborum jerky. Ham culpa nostrud exercitation veniam dolore short ribs spare ribs chuck.</p>
+        <img src="bacon.png" width="200px" />
+        <p>Pork meatball drumstick ut tail. Voluptate tongue pork belly minim flank. Do commodo ham ut spare ribs minim salami boudin reprehenderit andouille. Spare ribs ea filet mignon enim adipisicing sausage in ball tip cillum corned beef turducken. Nulla biltong ham, culpa shankle elit rump frankfurter. Ham eu fatback, deserunt turkey pancetta fugiat pork belly. Short ribs labore est hamburger proident ham hock biltong shank officia tenderloin laboris.</p>
+        <img src="Cooked_Bacon.jpg" width="200px" />
+        </div>
+        <div id="Counter" class="tab_content"> 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+insertCounter()
+// -->
+</SCRIPT>
+        </div>
+        <div id="MoreBacon" class="tab_content"> 
+        	<p>Bacon ipsum dolor sit amet short loin fatback spare ribs pork belly ham chicken beef pork pastrami turducken. Jowl boudin short ribs, pancetta spare ribs t-bone hamburger brisket pork chop. Shankle shank biltong swine. Fatback pork loin sirloin biltong meatloaf prosciutto. Venison beef turducken ground round chuck prosciutto ball tip tri-tip pork chop pig bresaola. Tri-tip capicola kielbasa strip steak prosciutto tongue hamburger andouille boudin filet mignon t-bone. Pork capicola turducken pork belly hamburger.</p>
+<p>Shank turducken chicken drumstick pastrami, pork belly ham boudin sirloin shankle bresaola pork loin pig t-bone. Venison beef ribs tail pork chop, drumstick boudin bacon chicken turducken salami strip steak shoulder ribeye. Drumstick corned beef salami leberkas, pig pork jerky hamburger turkey sausage brisket tenderloin short loin. Ball tip drumstick beef ribs, shank shoulder bresaola flank pancetta bacon. Boudin pork belly tenderloin, pork loin kielbasa spare ribs ground round pork sirloin beef ribs beef pastrami frankfurter meatball drumstick.</p>
+        </div>
+        <div id="EvenMoreBacon" class="tab_content"> 
+        	<p>Bacon ipsum dolor sit amet short loin fatback spare ribs pork belly ham chicken beef pork pastrami turducken. Jowl boudin short ribs, pancetta spare ribs t-bone hamburger brisket pork chop. Shankle shank biltong swine. Fatback pork loin sirloin biltong meatloaf prosciutto. Venison beef turducken ground round chuck prosciutto ball tip tri-tip pork chop pig bresaola. Tri-tip capicola kielbasa strip steak prosciutto tongue hamburger andouille boudin filet mignon t-bone. Pork capicola turducken pork belly hamburger.</p>
+<p>Shank turducken chicken drumstick pastrami, pork belly ham boudin sirloin shankle bresaola pork loin pig t-bone. Venison beef ribs tail pork chop, drumstick boudin bacon chicken turducken salami strip steak shoulder ribeye. Drumstick corned beef salami leberkas, pig pork jerky hamburger turkey sausage brisket tenderloin short loin. Ball tip drumstick beef ribs, shank shoulder bresaola flank pancetta bacon. Boudin pork belly tenderloin, pork loin kielbasa spare ribs ground round pork sirloin beef ribs beef pastrami frankfurter meatball drumstick.</p>
+<p>Bacon bresaola t-bone strip steak pastrami pork turducken turkey kielbasa drumstick capicola flank boudin chicken shankle. Jerky shankle shoulder capicola turkey venison boudin salami drumstick pork loin beef short ribs. Short loin salami cow leberkas turducken flank shankle, hamburger swine sirloin bacon boudin pig andouille. Kielbasa meatball bacon capicola ribeye, pork venison.</p>
+<p>Pastrami sausage andouille, rump flank strip steak jowl ham hock tenderloin meatball beef ribs venison tongue. Bresaola tenderloin rump beef ribs. Shankle meatball drumstick meatloaf biltong chuck pancetta t-bone tenderloin short loin ribeye turkey strip steak. Venison pork prosciutto salami short ribs shank ham frankfurter, sirloin t-bone pork chop ham hock shankle. Boudin sirloin corned beef shankle capicola salami tenderloin meatloaf strip steak. Pig bacon pork belly shank salami hamburger tenderloin biltong. Jerky pancetta beef ribs fatback biltong.</p>
+<p>Cow capicola filet mignon tri-tip shank t-bone, ground round boudin. Chicken turducken beef ribs turkey. Boudin pastrami meatloaf shankle tongue biltong tri-tip bacon ribeye hamburger pork loin drumstick short loin pancetta capicola. Chuck corned beef shoulder boudin sirloin, fatback bacon capicola ribeye flank. Sausage frankfurter bresaola, ball tip chuck capicola tri-tip short ribs short loin pork ham hock kielbasa shank beef. Ground round shoulder t-bone, tenderloin jerky pastrami tri-tip.</p>
+        </div>
+     </div>
+    </div>
+    <div id="footer">
+        <p>
+            Copyright 2012 - My First Website
+        </p>
+    </div>
+</div>
+</body>
+</html>
+
+</nowiki>

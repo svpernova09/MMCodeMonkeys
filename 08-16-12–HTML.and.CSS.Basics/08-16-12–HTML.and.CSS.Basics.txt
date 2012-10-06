@@ -1,0 +1,22 @@
+=== Topic ===
+
+HTML and CSS basics
+
+MidsouthMakers Code Monkeys
+August 16th Meeting
+
+=== Links ===
+ httpwww.codecademy.comtracksweb
+
+===Discussion===
+==HTML==
+ Fundamentals
+ Your first site
+ More with HTML
+
+==CSS==
+ CSS Style your code
+
+
+===Sidework  Working on your own===
+ Complete httpwww.codecademy.comtracksweb

@@ -1,0 +1,76 @@
+=== Topic ===
+
+Linux Administration for installing / configuring a LAMP stack and getting started with Github. Bring your laptops with VirtualBox and Ubuntu 12.04 already installed as a VM and we'll take it from there. If you want extra credit go ahead and install Virtualmin and configure a test host.
+
+MidsouthMakers: Code Monkeys
+August 2nd Meeting
+
+=== Links ===
+* VirtualBox: https://www.virtualbox.org/
+* Ubuntu 12.04: http://www.ubuntu.com/
+* Virtualmin: http://www.virtualmin.com/download.html#gpl
+* Virtualmin Documentation: http://www.virtualmin.com/documentation/tutorial
+
+===Instructions===
+==Configure VM's Network Adapters Network Interfaces:==
+* Open the VM Settings in Virtualbox and select Network.
+* Adapter 1: Attached to: <Bridged Adapter> Name: <Your Active NIC>
+* Adapter 2: Attached to: <Host-only Adapter> Name: VirtualBox Host-Only Ethernet Adapter>
+==Configure Ubuntu's Network Interfaces==
+* Open /etc/network/interfaces
+* Match these settings:
+<syntaxhighlight lang="bash">
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet dhcp
+</syntaxhighlight>
+==Install Virtualmin==
+* wget http://software.virtualmin.com/gpl/scripts/install.sh
+* sudo sh install.sh
+* Yes to confirm install
+* Enter FQDN (Doesn't have to resolve for our purposes)
+
+==Virtualmin Post Install==
+Once virtualmin is installed view https://<VMIP>:10000 to finish the installation and check the configuation.
+You will see an invalid/untrusted SSL warning. Safe to ignore.
+Login with the root user and root password selected during the OS installation.
+Work your way through the post installation wizard by clicking the Next Button.
+* Preload Virtualmin libraries?	 Yes
+* Run email domain lookup server?	No
+* Run ClamAV server scanner?	No
+* Run SpamAssassin server filter?	No
+* Run MySQL database server? Yes
+* Run PostgreSQL database server? No (Personal Preference)
+* Set MySQL Password
+* MySQL configuration size: Large system (1G) on which MySQL is heavily used (Personal Preference)
+* Primary nameserver (Should be the FQDN Set during install) 
+* Check box for Skip check for resolvability (We don't care if DNS works or not)
+* Password storage mode: Only store hashed passwords
+'''Post Install Configuration'''
+* Virtualmin's configuration has not been checked since it was last updated. Click the button below to verify it now.
+* Click through to modules and uncheck bind if you see a Bind error.
+'''Create Your Test Site'''
+Click on Create Virtual Server
+* Enter Domain Name: <test.halosrealm.com>
+* Description: <Test Site>
+* Administration Password: <SuperSecretPassword>
+* Click Create Server button
+Should see "Saving server details .... done"
+'''Install phpMyAdmin'''
+Ensure the Test site is selected in the dropdown in the left bar.
+Click Install Scripts
+Click the Green Arrow for phpMyAdmin
+Click the Install Now Button
+When complete you should see "Applying web server configuration .... done"
+
+You should know be able to SFTP to your VM's IP with your domain credentials. You should see a folder in your home labeled "public_html" this is the web root for your site.
+
+'''Backup & Restore'''
+* http://www.virtualmin.com/documentation/tutorial/how-to-backup-a-virtual-server
