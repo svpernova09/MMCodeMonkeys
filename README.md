@@ -1,4 +1,11 @@
-MMCodeMonkeys
+MMCodeMonkeys http://www.midsouthmakers.org/codemonkeys/
 =============
 
 MidsouthMakers #CodeMonkeys Meeting notes and sample code
+
+Meetings: 1st & 3rd Thursdays of each month. 7pm @ The Space.
+Our Purpose: MidsouthMakers: CodeMonkeys is a subgroup dedicated to the study and practical use of various web / programming technologies. It is a very open ended purpose by design so that we don’t pigeon hole ourselves into any specific technology. We may not even strictly stay in the realm of the web. Just like MidsouthMakers, CodeMonkeys will be largely user driven. I’m here to provide leadership and mangerial duties. I have a vague idea of what the next few months will hold for us, but it is nothing set in stone. We’re not going to be a users group. There are already various user groups in Memphis and the ones I have participated in are great. CodeMonkeys is about real world use and practical application of various technologies. We won’t be writing “Hello World” applications. We’ll be writing applications that are based on real world needs and solutions.
+
+Our Target: Anyone with programming experience or the drive to learn from an advanced type setting. We do have a couple of people interested that are completely new. These people I believe are going to be able to pick up and run with the rest of us. This isn’t a Programming 101 course. It’s likely not even a Programming 201 level. That’s not to say we won’t cover some basic stuff. What is basic to you may not be basic to me or someone else. I don’t want to purposefully exclude anyone, however I do want to be clear in our goals.
+
+Our Goals: Monthly meetings demonstrating practical application of a web technology or continued study in its use. I want to be able to throw a problem at the group, and a method to solve that problem. I want the group to work together (or individually if they wish) to solve the problem using the method provided (or another method along the same lines). The idea is to get you outside of your comfort zone. There will be some topics that won’t take an entire month, there will be some that may take multiple months. Another goal is to be well documented enough that anyone of just about any skill level can jump in and join at any time. At the same time regular members won’t feel behind if they have to miss a meeting.
